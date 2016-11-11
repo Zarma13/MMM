@@ -14,8 +14,9 @@ int main()
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
-			if (event.type == sf::Event::key.LEFT)
-				sf::CircleShape shape(pos_x++);
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+				shape.setPosition(posx += 1, 100);
+			}
 		}
 
 		window.clear();
