@@ -6,7 +6,7 @@
 #include "Game_state.hpp"
 
 // Déclaration de la classe MenuPrincipal
-class GameStateStart : public GameState
+class MenuPrincipal : public GameState
 {
 private:
 	// Déclaration des variables
@@ -23,6 +23,6 @@ public:
 	virtual void update(const float dt);
 	virtual void handleInput();
 	// Déclaration du constructeur
-	GameStateStart(Game* game);
+	MenuPrincipal(Game* game);
 };
 #endif
