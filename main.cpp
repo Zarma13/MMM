@@ -3,9 +3,8 @@
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100);
-	shape.setFillColor(sf::Color::Green);
-	int pos_x = 0;
+	sf::CircleShape shape(10);
+	shape.setFillColor(sf::Color::Red);
 
 	while (window.isOpen())
 	{
@@ -14,9 +13,9 @@ int main()
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-				shape.setPosition(posx += 1, 100);
-			}
+
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+				shape.setPosition(shape.getPosition().x, shape.getPosition().y + 1);
 		}
 
 		window.clear();
