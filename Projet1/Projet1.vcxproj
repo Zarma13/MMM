@@ -135,10 +135,18 @@
       <FileType>CppCode</FileType>
       <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SFML_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <ClCompile Include="D:\Users\Quentin\Desktop\src\game.cpp" />
+    <ClCompile Include="D:\Users\Quentin\Desktop\src\game_state_start.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\Users\Quentin\Desktop\src\Game.hpp" />
+    <ClInclude Include="D:\Users\Quentin\Desktop\src\Game_state.hpp" />
+    <ClInclude Include="D:\Users\Quentin\Desktop\src\Game_state_start.hpp" />
     <ClInclude Include="Player.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="D:\Users\Quentin\Downloads\arial.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

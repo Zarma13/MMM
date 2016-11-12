@@ -1,37 +1,15 @@
-﻿#include <SFML/Graphics.hpp>
+﻿#include "Game.hpp"
+#include "Game_state_start.hpp"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(10);
-	shape.setFillColor(sf::Color::Red);
+	Game game;
 
-	while (window.isOpen())
-	{
-		sf::Event event;
-		while (window.pollEvent(event))
-		{ // salut test modifi
-			if (event.type == sf::Event::Closed)
-				window.close();
+	// Mettre l'état en état de démarrage
+	game.pushState(new GameStateStart(&game));
 
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-				shape.setPosition(shape.getPosition().x, shape.getPosition().y + 5);
-
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
-				shape.setPosition(shape.getPosition().x - 5, shape.getPosition().y);
-
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
-				shape.setPosition(shape.getPosition().x, shape.getPosition().y - 5);
-
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-				shape.setPosition(shape.getPosition().x + 5, shape.getPosition().y);
-		}
-
-		window.clear();
-		window.draw(shape);
-		window.display();
-		//MODIF
-	}
+	// Boucle du jeu
+	game.gameLoop();
 
 	return 0;
 }
