@@ -125,6 +125,10 @@
       <AdditionalUsingDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Program Files (x86)\Microsoft Visual Studio 14.0\SFML-2.4.1\lib</AdditionalUsingDirectories>
       <FileType>CppCode</FileType>
     </ClCompile>
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Player.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
