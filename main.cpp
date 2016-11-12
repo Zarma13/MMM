@@ -1,15 +1,15 @@
-#include "Game.hpp"
-#include "Game_state_start.hpp"
+#include "game.hpp"
+#include "game_state_start.hpp"
 
 int main()
 {
 	Game game;
-	
-	// Mettre l'Ã©tat en Ã©tat de dÃ©marrage
+
+	// Mettre l'état en état de démarrage
 	game.pushState(new GameStateStart(&game));
-	
+
 	// Boucle du jeu
 	game.gameLoop();
-	
+
 	return 0;
 }

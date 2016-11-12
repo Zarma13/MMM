@@ -7,7 +7,7 @@
 class GameState;
 
 // Déclaration de la classe Game
-class Game{
+class Game {
 public:
 	float elapsedtime;
 	std::stack<GameState*> states;

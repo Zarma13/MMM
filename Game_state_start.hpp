@@ -1,15 +1,15 @@
-#ifndef MENU_PRINCIPAL_HPP
-#define MENU_PRINCIPAL_HPP
+#ifndef GAME_STATE_START_HPP
+#define GAME_STATE_START_HPP
 
 #include <SFML/Graphics.hpp>
 
 #include "Game_state.hpp"
 
-// DÃ©claration de la classe MenuPrincipal
+// Déclaration de la classe GameStateStart
 class GameStateStart : public GameState
 {
 private:
-	// DÃ©claration des variables
+	// Déclaration des variables
 	void loadgame();
 	void loadcre();
 	sf::Text nameGame;
@@ -18,11 +18,11 @@ private:
 	sf::Font font;
 	sf::RectangleShape selector;
 public:
-	// DÃ©claration des fonctions
+	// Déclaration des fonctions
 	virtual void draw(const float dt);
 	virtual void update(const float dt);
 	virtual void handleInput();
-	// DÃ©claration du constructeur
+	// Déclaration du constructeur
 	GameStateStart(Game* game);
 };
 #endif

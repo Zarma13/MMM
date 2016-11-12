@@ -127,26 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\main.cpp">
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Program Files (x86)\Microsoft Visual Studio 14.0\SFML\include</AdditionalIncludeDirectories>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Program Files (x86)\Microsoft Visual Studio 14.0\SFML\include</AdditionalIncludeDirectories>
-      <AdditionalUsingDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Program Files (x86)\Microsoft Visual Studio 14.0\SFML\lib</AdditionalUsingDirectories>
-      <AdditionalUsingDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Program Files (x86)\Microsoft Visual Studio 14.0\SFML\lib</AdditionalUsingDirectories>
-      <FileType>CppCode</FileType>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">SFML_STATIC;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
-    <ClCompile Include="D:\Users\Quentin\Desktop\src\game.cpp" />
-    <ClCompile Include="D:\Users\Quentin\Desktop\src\game_state_start.cpp" />
-    <ClCompile Include="Player.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\Users\Quentin\Desktop\src\Game.hpp" />
-    <ClInclude Include="D:\Users\Quentin\Desktop\src\Game_state.hpp" />
-    <ClInclude Include="D:\Users\Quentin\Desktop\src\Game_state_start.hpp" />
-    <ClInclude Include="Player.hpp" />
-  </ItemGroup>
-  <ItemGroup>
     <Font Include="D:\Users\Quentin\Downloads\arial.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Game.hpp" />
+    <ClInclude Include="..\Game_state.hpp" />
+    <ClInclude Include="..\Game_state_start.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\game.cpp" />
+    <ClCompile Include="..\game_state_start.cpp" />
+    <ClCompile Include="..\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
