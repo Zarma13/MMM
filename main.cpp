@@ -21,6 +21,7 @@ int main()
 		window.clear();
 		window.draw(shape);
 		window.display();
+		//MODIF
 	}
 
 	return 0;
