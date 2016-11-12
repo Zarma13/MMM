@@ -14,14 +14,17 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-				shape.setPosition(shape.getPosition().x, shape.getPosition().y + 1);
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-				shape.setPosition(shape.getPosition().x - 1, shape.getPosition().y);
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-				shape.setPosition(shape.getPosition().x, shape.getPosition().y - 1);
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-				shape.setPosition(shape.getPosition().x + 1, shape.getPosition().y);
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+				shape.setPosition(shape.getPosition().x, shape.getPosition().y + 5);
+
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
+				shape.setPosition(shape.getPosition().x - 5, shape.getPosition().y);
+
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Z))
+				shape.setPosition(shape.getPosition().x, shape.getPosition().y - 5);
+
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+				shape.setPosition(shape.getPosition().x + 5, shape.getPosition().y);
 		}
 
 		window.clear();
