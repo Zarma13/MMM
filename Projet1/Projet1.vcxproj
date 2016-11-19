@@ -139,6 +139,9 @@
     <ClCompile Include="..\game_state_start.cpp" />
     <ClCompile Include="..\main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Electroswing.ogg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

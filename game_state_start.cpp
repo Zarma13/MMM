@@ -1,4 +1,6 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
+#include <iostream>
 
 #include "Game_State_Start.hpp"
 #include "Game_state.hpp"
@@ -14,12 +16,21 @@ void GameStateStart::draw(const float dt) {
 }
 
 void GameStateStart::update(const float dt) {
+	if (music.getPlayingOffset() >= sf::milliseconds(14500))
+		music.setPlayingOffset(sf::milliseconds(12100));
 
+	levitating_title();
 }
 
 // Définition de la fonction GameStateStart qui chargera les élément de la fenetre
 GameStateStart::GameStateStart(Game* game) {
 	this->game = game;
+
+	load_music("Electroswing.ogg");
+
+
+
+	std::cout << "TEST" << std::endl;
 	if (!font.loadFromFile("arial.ttf")) {}
 
 	nameGame.setFont(font);
@@ -92,6 +103,22 @@ void GameStateStart::handleInput()
 // Démarrer le jeu
 void GameStateStart::loadgame() {
 	//this->game->pushState(new GameStateStartPageLoadGame(this->game));
-}void GameStateStart::loadcre() {
+}
+
+void GameStateStart::loadcre() {
 	//this->game->pushState(new GameStateCreate(this->game));
+}
+
+void GameStateStart::load_music(std::string title) {
+	if (!music.openFromFile(title)) {}
+	music.setVolume(25);
+	music.play();
+	music.setPlayingOffset(sf::milliseconds(12100));
+}
+
+void GameStateStart::levitating_title() {
+	x += 0.1;
+	if (x >= 6.28)
+		x = 0;
+	nameGame.setPosition(nameGame.getPosition().x , nameGame.getPosition().y + cos(x));
 }

@@ -15,11 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="D:\Users\Quentin\Downloads\arial.ttf">
-      <Filter>Fichiers sources</Filter>
-    </Font>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="..\Game.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -40,5 +35,15 @@
     <ClCompile Include="..\main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="D:\Users\Quentin\Downloads\arial.ttf">
+      <Filter>Fichiers de ressources</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Electroswing.ogg">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
   </ItemGroup>
 </Project>
