@@ -81,12 +81,12 @@ void GameStateStart::handleInput()
 			if (event.key.code == sf::Keyboard::Escape)
 				this->game->window.close();
 			if (event.key.code == sf::Keyboard::Space) {
-				//SafeGuard(this->game->getSafeGuardList(), "papy", "vieux", 88, "level-2");
+				if (event.key.code == sf::Keyboard::Return && selector.getPosition() == sf::Vector2f(this->game->window.getSize().x*0.75, this->game->window.getSize().y / 2))
+					this->loadgame();
+				if (event.key.code == sf::Keyboard::Return && selector.getPosition() == sf::Vector2f(this->game->window.getSize().x*0.25, this->game->window.getSize().y / 2))
+					this->loadcre();
 			}
-			if (event.key.code == sf::Keyboard::Return && selector.getPosition() == sf::Vector2f(this->game->window.getSize().x*0.75, this->game->window.getSize().y / 2))
-				this->loadgame();
-			if (event.key.code == sf::Keyboard::Return && selector.getPosition() == sf::Vector2f(this->game->window.getSize().x*0.25, this->game->window.getSize().y / 2))
-				this->loadcre();
+
 			if (event.key.code == sf::Keyboard::Right)
 				selector.setPosition(sf::Vector2f(this->game->window.getSize().x*0.75, this->game->window.getSize().y / 2));
 			if (event.key.code == sf::Keyboard::Left)
